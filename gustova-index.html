@@ -1,0 +1,1419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gustova Turizm – Luxury Corporate Travel Management & Concierge Services</title>
+    <meta name="description" content="Your corporate travel partner. One invoice, total transparency, 24/7 concierge. Focus on business, we handle the journey. TÜRSAB certified.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            /* Luxury Color Palette */
+            --primary-navy: #1B2845;
+            --deep-navy: #0D1528;
+            --gold-accent: #C9A96E;
+            --champagne: #E8D5B5;
+            --warm-white: #FAF8F3;
+            --soft-gray: #8B8B8B;
+            --charcoal: #2D2D2D;
+            --pure-white: #FFFFFF;
+            --subtle-border: #E5DCC9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Lato', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--charcoal);
+            line-height: 1.7;
+            background-color: var(--pure-white);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .container {
+            width: 88%;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--primary-navy);
+            letter-spacing: -0.02em;
+        }
+
+        h1 { font-size: 3.5em; margin-bottom: 0.25em; }
+        h2 { font-size: 2.8em; margin-bottom: 0.4em; }
+        h3 { font-size: 2em; margin-bottom: 0.5em; }
+        h4 { font-size: 1.5em; margin-bottom: 0.4em; }
+
+        .subtitle {
+            font-family: 'Lato', sans-serif;
+            font-weight: 300;
+            font-size: 1.25em;
+            line-height: 1.6;
+            color: var(--soft-gray);
+        }
+
+        .text-center { text-align: center; }
+        .section-padding { padding: 7em 0; }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 16px 40px;
+            border-radius: 2px;
+            text-decoration: none;
+            font-family: 'Lato', sans-serif;
+            font-weight: 700;
+            font-size: 0.9em;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 2px solid transparent;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: var(--gold-accent);
+            color: var(--deep-navy);
+            border-color: var(--gold-accent);
+        }
+
+        .btn-primary:hover {
+            background: transparent;
+            color: var(--gold-accent);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(201, 169, 110, 0.25);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--pure-white);
+            border-color: var(--pure-white);
+        }
+
+        .btn-secondary:hover {
+            background: var(--pure-white);
+            color: var(--primary-navy);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--primary-navy);
+            border-color: var(--primary-navy);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary-navy);
+            color: var(--pure-white);
+        }
+
+        /* Header */
+        .header-announcement {
+            background: var(--deep-navy);
+            color: var(--champagne);
+            padding: 12px 0;
+            font-size: 0.85em;
+            font-weight: 300;
+            letter-spacing: 0.05em;
+            text-align: center;
+        }
+
+        .header-announcement a {
+            color: var(--gold-accent);
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        header {
+            background: var(--pure-white);
+            border-bottom: 1px solid var(--subtle-border);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.04);
+        }
+
+        .header-main {
+            padding: 20px 0;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2em;
+            font-weight: 700;
+            color: var(--primary-navy);
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--charcoal);
+            padding: 12px 20px;
+            display: block;
+            font-weight: 400;
+            font-size: 0.9em;
+            letter-spacing: 0.05em;
+            transition: all 0.3s ease;
+            border-bottom: 2px solid transparent;
+        }
+
+        nav ul li a:hover {
+            color: var(--gold-accent);
+            border-bottom-color: var(--gold-accent);
+        }
+
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.8em;
+            color: var(--primary-navy);
+            cursor: pointer;
+        }
+
+        .close-menu {
+            display: none;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 2em;
+            color: var(--primary-navy);
+            cursor: pointer;
+        }
+
+        /* Hero Section - REDUCED PADDING */
+        .hero {
+            background: linear-gradient(135deg, var(--deep-navy) 0%, var(--primary-navy) 100%);
+            padding: 5em 0 4em; /* Further reduced bottom padding */
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(201, 169, 110, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero-content {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(201, 169, 110, 0.15);
+            color: var(--champagne);
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-size: 0.85em;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 2em; /* Reduced from 3em */
+            border: 1px solid rgba(201, 169, 110, 0.3);
+        }
+
+        .hero h1 {
+            color: var(--pure-white);
+            margin-bottom: 0.4em;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .hero .subtitle {
+            color: var(--champagne);
+            font-size: 1.3em;
+            margin-bottom: 2.5em;
+            animation: fadeInUp 0.8s ease 0.2s backwards;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease 0.4s backwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Features Grid - MORE READABLE */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 40px;
+            margin-top: 0; /* Removed top margin */
+        }
+
+        .feature-card {
+            text-align: center;
+            background: var(--warm-white);
+            padding: 30px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            border: 1px solid var(--subtle-border);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .feature-icon {
+            font-size: 2.5em;
+            color: var(--gold-accent);
+            margin-bottom: 20px;
+        }
+
+        .feature-card h4 {
+            color: var(--primary-navy);
+            margin-bottom: 10px;
+            font-size: 1.1em;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .feature-card p {
+            color: var(--soft-gray);
+            font-size: 0.95em;
+            line-height: 1.5;
+        }
+
+        /* Process Section - HORIZONTAL TIMELINE */
+        .process-container {
+            margin-top: 4em;
+            position: relative;
+        }
+
+        .process-timeline {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+            position: relative;
+        }
+
+        .process-timeline::before {
+            content: '';
+            position: absolute;
+            top: 30px;
+            left: 10%;
+            right: 10%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--gold-accent) 0%, var(--champagne) 100%);
+            z-index: 0;
+        }
+
+        .process-step {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .step-number {
+            background: var(--gold-accent);
+            color: var(--deep-navy);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.5em;
+            margin: 0 auto 20px;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 4px 15px rgba(201, 169, 110, 0.3);
+        }
+
+        .step-content h4 {
+            color: var(--primary-navy);
+            margin-bottom: 10px;
+            font-size: 1.2em;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .step-content p {
+            color: var(--soft-gray);
+            line-height: 1.5;
+            font-size: 0.95em;
+        }
+
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 4em;
+        }
+
+        .service-card {
+            background: var(--pure-white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .service-card.animate {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-image {
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, transparent 50%, rgba(27, 40, 69, 0.8) 100%);
+        }
+
+        .service-content {
+            padding: 30px;
+        }
+
+        .service-content h3 {
+            color: var(--primary-navy);
+            margin-bottom: 15px;
+            font-size: 1.8em;
+        }
+
+        .service-content p {
+            color: var(--soft-gray);
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .service-features {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+
+        .service-features li {
+            color: var(--charcoal);
+            padding: 8px 0;
+            border-bottom: 1px solid var(--subtle-border);
+            display: flex;
+            align-items: center;
+        }
+
+        .service-features li:before {
+            content: '✓';
+            color: var(--gold-accent);
+            margin-right: 10px;
+            font-weight: 700;
+        }
+
+        /* Benefits Section */
+        .benefits-bg {
+            background: var(--warm-white);
+        }
+
+        .benefit-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 4em;
+        }
+
+        .benefit-card {
+            text-align: center;
+            padding: 30px;
+        }
+
+        .benefit-icon-box {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 25px;
+            background: linear-gradient(135deg, var(--gold-accent) 0%, var(--champagne) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
+            color: var(--deep-navy);
+            box-shadow: 0 10px 30px rgba(201, 169, 110, 0.3);
+        }
+
+        .benefit-card h4 {
+            color: var(--primary-navy);
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        .benefit-card p {
+            color: var(--soft-gray);
+            line-height: 1.6;
+        }
+
+        /* Contact Section */
+        .contact-bg {
+            background: linear-gradient(135deg, var(--deep-navy) 0%, var(--primary-navy) 100%);
+            color: var(--pure-white);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 60px;
+            margin-top: 4em;
+        }
+
+        .contact-info {
+            color: var(--pure-white);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
+
+        .contact-icon-box {
+            width: 50px;
+            height: 50px;
+            background: rgba(201, 169, 110, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            font-size: 1.3em;
+            border: 1px solid rgba(201, 169, 110, 0.3);
+        }
+
+        .contact-details h4 {
+            color: var(--champagne);
+            margin-bottom: 8px;
+            font-size: 1.2em;
+        }
+
+        .contact-details p, .contact-details a {
+            color: var(--pure-white);
+            font-size: 1.05em;
+        }
+
+        .contact-details a {
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-details a:hover {
+            color: var(--gold-accent);
+        }
+
+        .tursab-info-box {
+            background: rgba(201, 169, 110, 0.1);
+            padding: 25px;
+            border-radius: 8px;
+            margin-top: 30px;
+            border: 1px solid rgba(201, 169, 110, 0.3);
+        }
+
+        .tursab-info-box h4 {
+            color: var(--champagne);
+            margin-bottom: 15px;
+        }
+
+        .tursab-info-box p {
+            color: var(--pure-white);
+            margin-bottom: 8px;
+        }
+
+        /* Contact Form */
+        .contact-form-card {
+            background: var(--pure-white);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .contact-form-card h3 {
+            color: var(--primary-navy);
+            margin-bottom: 30px;
+            font-size: 2.2em;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 0;
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / -1;
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            color: var(--charcoal);
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid var(--subtle-border);
+            border-radius: 4px;
+            font-size: 1em;
+            font-family: inherit;
+            transition: all 0.3s ease;
+            background: var(--pure-white);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--gold-accent);
+            background: var(--warm-white);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--deep-navy);
+            color: var(--pure-white);
+            padding: 4em 0 2em;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 40px;
+            margin-bottom: 3em;
+        }
+
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8em;
+            font-weight: 700;
+            color: var(--champagne);
+            margin-bottom: 20px;
+        }
+
+        .footer-column h4 {
+            color: var(--champagne);
+            margin-bottom: 20px;
+            font-size: 1.1em;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-column ul li a,
+        .footer-column p,
+        .footer-column a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-column ul li a:hover,
+        .footer-column a:hover {
+            color: var(--gold-accent);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: rgba(201, 169, 110, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: var(--champagne);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(201, 169, 110, 0.3);
+        }
+
+        .social-links a:hover {
+            background: var(--gold-accent);
+            color: var(--deep-navy);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2em;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9em;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                width: 92%;
+            }
+
+            h1 { font-size: 2.5em; }
+            h2 { font-size: 2em; }
+            h3 { font-size: 1.5em; }
+
+            .mobile-toggle {
+                display: block;
+            }
+
+            nav {
+                position: fixed;
+                top: 0;
+                right: -300px;
+                width: 300px;
+                height: 100vh;
+                background: var(--pure-white);
+                box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
+                transition: right 0.3s ease;
+                z-index: 1001;
+            }
+
+            nav.active {
+                right: 0;
+            }
+
+            nav.active .close-menu {
+                display: block;
+            }
+
+            nav ul {
+                flex-direction: column;
+                padding: 80px 20px 20px;
+                gap: 0;
+            }
+
+            nav ul li a {
+                padding: 15px 20px;
+                border-bottom: 1px solid var(--subtle-border);
+            }
+
+            .hero {
+                padding: 3em 0 4em;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .hero-cta .btn {
+                width: 100%;
+                max-width: 280px;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .process-timeline {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .process-timeline::before {
+                display: none;
+            }
+
+            .process-step {
+                display: flex;
+                align-items: center;
+                text-align: left;
+                gap: 20px;
+            }
+
+            .step-number {
+                margin: 0;
+                flex-shrink: 0;
+            }
+
+            .step-content {
+                text-align: left;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 2em; }
+            h2 { font-size: 1.6em; }
+
+            .section-padding {
+                padding: 4em 0;
+            }
+
+            .btn {
+                padding: 14px 30px;
+                font-size: 0.85em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Announcement Bar -->
+    <div class="header-announcement">
+        <span style="color: var(--gold-accent);">🇹🇷 Istanbul</span> | 24/7 Dedicated Concierge Service | TÜRSAB Certified Travel Agency | <a href="#contact">Request a Quote</a>
+    </div>
+
+    <!-- Main Header -->
+    <header>
+        <div class="header-main">
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo-section">
+                        <a href="#home" class="logo">GUSTOVA TURIZM</a>
+                    </div>
+                    
+                    <nav id="mainNav">
+                        <button class="close-menu" onclick="closeMenu()">✕</button>
+                        <ul>
+                            <li><a href="#home" onclick="closeMenu()">Home</a></li>
+                            <li><a href="#process" onclick="closeMenu()">How It Works</a></li>
+                            <li><a href="#services" onclick="closeMenu()">Services</a></li>
+                            <li><a href="#benefits" onclick="closeMenu()">Why Us</a></li>
+                            <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+                        </ul>
+                    </nav>
+                    
+                    <div style="display: flex; align-items: center; gap: 20px;">
+                        <a href="#contact" class="btn btn-primary">GET STARTED</a>
+                        <button class="mobile-toggle" onclick="toggleMenu()">☰</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">Premium Corporate Travel Management</div>
+                
+                <h1>Your Corporate Travel Partner</h1>
+                
+                <p class="subtitle">
+                    One invoice. Total transparency. 24/7 concierge.<br>
+                    Focus on business, we handle the journey.
+                </p>
+                
+                <div class="hero-cta">
+                    <a href="#contact" class="btn btn-primary">Request Consultation</a>
+                    <a href="#process" class="btn btn-secondary">Discover Our Approach</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section style="padding: 3em 0 5em;">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">✈</div>
+                    <h4>24/7 CONCIERGE</h4>
+                    <p>Expert Support Always</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📄</div>
+                    <h4>SINGLE INVOICE</h4>
+                    <p>Simplified Billing</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">💎</div>
+                    <h4>TRANSPARENT</h4>
+                    <p>No Hidden Fees</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🏆</div>
+                    <h4>TÜRSAB CERTIFIED</h4>
+                    <p>Licensed & Trusted</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="section-padding" id="process" style="background: var(--warm-white);">
+        <div class="container">
+            <div class="text-center">
+                <h2>How We Work</h2>
+                <p class="subtitle">Simple, efficient, and tailored to your needs</p>
+            </div>
+            
+            <div class="process-container">
+                <div class="process-timeline">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>UNDERSTAND</h4>
+                            <p>We learn your travel needs and preferences</p>
+                        </div>
+                    </div>
+                
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>BOOK</h4>
+                            <p>Flights, hotels, transfers - even via WhatsApp</p>
+                        </div>
+                    </div>
+                
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>INVOICE</h4>
+                            <p>One clear invoice for all services</p>
+                        </div>
+                    </div>
+                
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>REPORT</h4>
+                            <p>Monthly travel insights and savings</p>
+                        </div>
+                    </div>
+                
+                    <div class="process-step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h4>SUPPORT</h4>
+                            <p>24/7 assistance throughout your journey</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section-padding" id="services">
+        <div class="container">
+            <div class="text-center">
+                <h2>Our Services</h2>
+                <p class="subtitle">Comprehensive solutions for every travel requirement</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800');">
+                        <div class="service-overlay"></div>
+                    </div>
+                    <div class="service-content">
+                        <h3>Flight Services</h3>
+                        <p>Premium business and first-class bookings with exclusive corporate rates and flexible policies.</p>
+                        <ul class="service-features">
+                            <li>Corporate rate agreements</li>
+                            <li>Flexible booking policies</li>
+                            <li>24/7 flight monitoring</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800');">
+                        <div class="service-overlay"></div>
+                    </div>
+                    <div class="service-content">
+                        <h3>Luxury Hotels</h3>
+                        <p>Curated selection of premium accommodations with exclusive amenities and corporate benefits.</p>
+                        <ul class="service-features">
+                            <li>VIP treatment guaranteed</li>
+                            <li>Late checkout privileges</li>
+                            <li>Executive lounge access</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=800');">
+                        <div class="service-overlay"></div>
+                    </div>
+                    <div class="service-content">
+                        <h3>Private Jets</h3>
+                        <p>Access to global fleet of private aircraft for ultimate flexibility and privacy.</p>
+                        <ul class="service-features">
+                            <li>Global aircraft network</li>
+                            <li>On-demand availability</li>
+                            <li>Custom catering options</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=800');">
+                        <div class="service-overlay"></div>
+                    </div>
+                    <div class="service-content">
+                        <h3>Yacht Charters</h3>
+                        <p>Exclusive yacht experiences for corporate events and executive retreats.</p>
+                        <ul class="service-features">
+                            <li>Luxury yacht selection</li>
+                            <li>Professional crew service</li>
+                            <li>Custom itineraries</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800');">
+                        <div class="service-overlay"></div>
+                    </div>
+                    <div class="service-content">
+                        <h3>Ground Transport</h3>
+                        <p>Premium chauffeur services and luxury vehicle rentals worldwide.</p>
+                        <ul class="service-features">
+                            <li>Professional chauffeurs</li>
+                            <li>Luxury vehicle fleet</li>
+                            <li>Airport meet & greet</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800');">
+                        <div class="service-overlay"></div>
+                    </div>
+                    <div class="service-content">
+                        <h3>Travel Management</h3>
+                        <p>Complete corporate travel program management with dedicated account support.</p>
+                        <ul class="service-features">
+                            <li>Dedicated account manager</li>
+                            <li>Travel policy compliance</li>
+                            <li>Expense management</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="section-padding benefits-bg" id="benefits">
+        <div class="container">
+            <div class="text-center">
+                <h2>Why Choose Gustova Turizm</h2>
+                <p class="subtitle">Experience the difference of truly personalized service</p>
+            </div>
+            
+            <div class="benefit-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon-box">⏰</div>
+                    <h4>Save Time</h4>
+                    <p>One call handles everything. No more juggling multiple vendors or platforms.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon-box">💰</div>
+                    <h4>Reduce Costs</h4>
+                    <p>Corporate rates and volume discounts across our entire network.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon-box">📊</div>
+                    <h4>Track Everything</h4>
+                    <p>Detailed reporting and analytics for complete budget control.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon-box">🛡️</div>
+                    <h4>Stay Protected</h4>
+                    <p>TÜRSAB certified and insured for your complete peace of mind.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon-box">🌍</div>
+                    <h4>Global Reach</h4>
+                    <p>Worldwide network of trusted partners and suppliers.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon-box">🎯</div>
+                    <h4>Personal Touch</h4>
+                    <p>Dedicated account manager who knows your preferences.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section-padding contact-bg" id="contact">
+        <div class="container">
+            <div class="text-center">
+                <h2 style="color: var(--pure-white);">Get in Touch</h2>
+                <p class="subtitle" style="color: var(--champagne);">Let's discuss how we can elevate your corporate travel</p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon-box">📞</div>
+                        <div class="contact-details">
+                            <h4>24/7 Concierge</h4>
+                            <p><a href="tel:+905323096001">+90 532 309 6001</a></p>
+                            <p><a href="https://wa.me/905323096001">WhatsApp Available</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon-box">✉️</div>
+                        <div class="contact-details">
+                            <h4>Email Us</h4>
+                            <p><a href="mailto:info@gustovaturizm.com">info@gustovaturizm.com</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon-box">📍</div>
+                        <div class="contact-details">
+                            <h4>Headquarters</h4>
+                            <p>DMN PLAZA, 3rd Floor<br>34518 ESENYURT, ISTANBUL<br>TÜRKIYE</p>
+                        </div>
+                    </div>
+
+                    <div class="tursab-info-box">
+                        <h4>Official Credentials</h4>
+                        <p><strong>TÜRSAB Member:</strong> 18492</p>
+                        <p><strong>Company:</strong> GUSTOVA TURIZM TIC. LTD. STI.</p>
+                        <p><strong>Tax ID:</strong> 4121218415</p>
+                    </div>
+                </div>
+
+                <div class="contact-form-card">
+                    <h3>Request a Consultation</h3>
+                    <form action="https://formspree.io/f/mjkzrloy" method="POST" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Company Name *</label>
+                                <input type="text" name="company" required placeholder="Your organization">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Full Name *</label>
+                                <input type="text" name="name" required placeholder="Your name">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Email Address *</label>
+                                <input type="email" name="email" required placeholder="name@company.com">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Phone Number *</label>
+                                <input type="tel" name="phone" required placeholder="+90 532 309 6001">
+                            </div>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label>Service Interest</label>
+                            <select name="service">
+                                <option>Please select...</option>
+                                <option>Flight Services</option>
+                                <option>Hotel Reservations</option>
+                                <option>Private Jet Charter</option>
+                                <option>Yacht Charter</option>
+                                <option>Ground Transportation</option>
+                                <option>Complete Travel Management</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label>Your Message</label>
+                            <textarea name="message" placeholder="Please describe your corporate travel requirements..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Inquiry</button>
+                        <p id="formStatus" style="margin-top: 20px; font-size: 0.9em; color: var(--soft-gray); text-align: center; display: none;"></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <div class="footer-logo">GUSTOVA TURIZM</div>
+                    <p>Gustova Turizm Tic. Ltd. Şti.<br>TÜRSAB Member: 18492</p>
+                    <p style="margin-top: 20px;">Your trusted partner in premium corporate travel management, delivering bespoke solutions with unwavering dedication to excellence.</p>
+                    <div class="social-links">
+                        <a href="#" title="LinkedIn">in</a>
+                        <a href="#" title="Instagram">◆</a>
+                        <a href="https://wa.me/905323096001" title="WhatsApp">◇</a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Flight Services</a></li>
+                        <li><a href="#services">Luxury Hotels</a></li>
+                        <li><a href="#services">Private Jets</a></li>
+                        <li><a href="#services">Yacht Charters</a></li>
+                        <li><a href="#services">Ground Transport</a></li>
+                        <li><a href="#services">Travel Management</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#home">About Us</a></li>
+                        <li><a href="#process">Our Approach</a></li>
+                        <li><a href="#benefits">Why Choose Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Get in Touch</h4>
+                    <p><strong>24/7 Concierge:</strong><br>
+                    <a href="tel:+905323096001">+90 532 309 6001</a></p>
+                    <p><strong>Email:</strong><br>
+                    <a href="mailto:info@gustovaturizm.com">info@gustovaturizm.com</a></p>
+                    <p><strong>Address:</strong><br>
+                    DMN PLAZA, 3rd Floor<br>
+                    34518 ESENYURT, ISTANBUL</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Gustova Turizm Tic. Ltd. Şti. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        function toggleMenu() {
+            document.getElementById('mainNav').classList.toggle('active');
+        }
+
+        function closeMenu() {
+            document.getElementById('mainNav').classList.remove('active');
+        }
+
+        // AJAX Form submission without redirect
+        const contactForm = document.getElementById('contactForm');
+        const formStatus = document.getElementById('formStatus');
+        
+        if (contactForm) {
+            contactForm.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                
+                const submitButton = contactForm.querySelector('button[type="submit"]');
+                const originalText = submitButton.textContent;
+                submitButton.textContent = 'Sending...';
+                submitButton.disabled = true;
+                
+                try {
+                    const response = await fetch(contactForm.action, {
+                        method: 'POST',
+                        body: new FormData(contactForm),
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    });
+                    
+                    if (response.ok) {
+                        formStatus.style.display = 'block';
+                        formStatus.style.color = '#C9A96E';
+                        formStatus.innerHTML = '✓ Thank you! Your inquiry has been submitted successfully.<br>We will contact you within one business day.';
+                        contactForm.reset();
+                        
+                        // Scroll to form status
+                        formStatus.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        
+                        // Hide message after 10 seconds
+                        setTimeout(() => {
+                            formStatus.style.display = 'none';
+                        }, 10000);
+                    } else {
+                        throw new Error('Form submission failed');
+                    }
+                } catch (error) {
+                    formStatus.style.display = 'block';
+                    formStatus.style.color = '#DC2626';
+                    formStatus.textContent = '✗ Sorry, there was an error sending your message. Please email us directly at info@gustovaturizm.com';
+                }
+                
+                submitButton.textContent = originalText;
+                submitButton.disabled = false;
+            });
+        }
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && href !== '#home') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                }
+            });
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.process-step, .service-card, .feature-card').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
